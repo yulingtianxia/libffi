@@ -218,6 +218,7 @@ def build_target(platform, platform_headers):
             [
                 "../configure",
                 f"--host={platform.target}",
+                "--disable-multi-os-directory"
             ] + (
                 [] if platform.sdk == "macosx" else [f"--build={os.uname().machine}-apple-darwin"]
             ),
@@ -248,10 +249,10 @@ def generate_source_and_headers(
     copy_files('include', 'darwin_common/include', pattern='*.h')
 
     if generate_ios:
-        copy_src_platform_files(ios_simulator_i386_platform)
+        # copy_src_platform_files(ios_simulator_i386_platform)
         copy_src_platform_files(ios_simulator_x86_64_platform)
         copy_src_platform_files(ios_simulator_arm64_platform)
-        copy_src_platform_files(ios_device_armv7_platform)
+        # copy_src_platform_files(ios_device_armv7_platform)
         copy_src_platform_files(ios_device_arm64_platform)
     if generate_osx:
         copy_src_platform_files(desktop_x86_64_platform)
@@ -261,7 +262,7 @@ def generate_source_and_headers(
         copy_src_platform_files(tvos_simulator_arm64_platform)
         copy_src_platform_files(tvos_device_arm64_platform)
     if generate_watchos:
-        copy_src_platform_files(watchos_simulator_i386_platform)
+        # copy_src_platform_files(watchos_simulator_i386_platform)
         copy_src_platform_files(watchos_simulator_x86_64_platform)
         copy_src_platform_files(watchos_simulator_arm64_platform)
         copy_src_platform_files(watchos_device_armv7k_platform)
@@ -270,10 +271,10 @@ def generate_source_and_headers(
     platform_headers = collections.defaultdict(set)
 
     if generate_ios:
-        build_target(ios_simulator_i386_platform, platform_headers)
+        # build_target(ios_simulator_i386_platform, platform_headers)
         build_target(ios_simulator_x86_64_platform, platform_headers)
         build_target(ios_simulator_arm64_platform, platform_headers)
-        build_target(ios_device_armv7_platform, platform_headers)
+        # build_target(ios_device_armv7_platform, platform_headers)
         build_target(ios_device_arm64_platform, platform_headers)
     if generate_osx:
         build_target(desktop_x86_64_platform, platform_headers)
@@ -283,7 +284,7 @@ def generate_source_and_headers(
         build_target(tvos_simulator_arm64_platform, platform_headers)
         build_target(tvos_device_arm64_platform, platform_headers)
     if generate_watchos:
-        build_target(watchos_simulator_i386_platform, platform_headers)
+        # build_target(watchos_simulator_i386_platform, platform_headers)
         build_target(watchos_simulator_x86_64_platform, platform_headers)
         build_target(watchos_simulator_arm64_platform, platform_headers)
         build_target(watchos_device_armv7k_platform, platform_headers)
