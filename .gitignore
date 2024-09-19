@@ -30,10 +30,58 @@ missing
 stamp-h1
 libffi*gz
 autom4te.cache
-**/xcuserdata
-Pods/
-libffi.xcodeproj/project.xcworkspace
 build_*/
 darwin_*/
 src/arm/trampoline.S
 **/texinfo.tex
+
+# Xcode
+.DS_Store
+build/
+DerivedData/
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata/
+*.xccheckout
+*.moved-aside
+*.xcuserstate
+*.xcscmblueprint
+
+# Swift Package Manager
+.build/
+# Package.resolved
+# Xcode automatically generates this file and it should be included in the repository.
+# If you are using a CI service or other automated tools, you may want to ignore this file.
+# Package.resolved
+
+# CocoaPods
+Pods/
+# Add this line if you want to avoid checking in source code from Pods.
+# This is not recommended.
+# Podfile.lock
+
+# Carthage
+Carthage/Build/
+
+# fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/**/*.png
+fastlane/test_output
+
+# Code coverage / Xcode
+*.gcno
+
+# AppCode
+.idea/
+
+# Other
+*.swp
+*.lock
+*.xcuserdatad
