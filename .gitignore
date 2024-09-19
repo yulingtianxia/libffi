@@ -30,7 +30,8 @@ missing
 stamp-h1
 libffi*gz
 autom4te.cache
-libffi.xcodeproj/xcuserdata
+**/xcuserdata
+Pods/
 libffi.xcodeproj/project.xcworkspace
 build_*/
 darwin_*/
