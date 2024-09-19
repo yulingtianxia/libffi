@@ -35,7 +35,6 @@ FFI stands for Foreign Function Interface. A foreign function interface is the p
                    DESC
 
   spec.homepage     = "http://sourceware.org/libffi/"
-  # spec.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
   # ―――  Spec License  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -45,7 +44,6 @@ FFI stands for Foreign Function Interface. A foreign function interface is the p
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  # spec.license      = "MIT"
   spec.license      = { :file => "LICENSE" }
 
 
@@ -59,11 +57,7 @@ FFI stands for Foreign Function Interface. A foreign function interface is the p
   #  profile URL.
   #
 
-  spec.author             = { "rebootyang" => "rebootyang@tencent.com" }
-  # Or just: spec.author    = "rebootyang"
-  # spec.authors            = { "rebootyang" => "rebootyang@tencent.com" }
-  # spec.social_media_url   = "https://twitter.com/rebootyang"
-
+  spec.author             = "libffi contributors"
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
   #  If this Pod runs only on iOS or OS X, then specify the platform and
@@ -99,47 +93,6 @@ FFI stands for Foreign Function Interface. A foreign function interface is the p
   #
 
   spec.source_files  = "darwin_common/**/*.{h,c,S}","darwin_ios/**/*.{h,c,S}"
-  # spec.exclude_files = "Classes/Exclude"
-
   spec.public_header_files = "darwin_common/include/*.h", "darwin_ios/include/*.h"
-
-
-  # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  #
-  #  A list of resources included with the Pod. These are copied into the
-  #  target bundle with a build phase script. Anything else will be cleaned.
-  #  You can preserve files from being cleaned, please don't preserve
-  #  non-essential files like tests, examples and documentation.
-  #
-
-  # spec.resource  = "icon.png"
-  # spec.resources = "Resources/*.png"
-
-  # spec.preserve_paths = "FilesToSave", "MoreFilesToSave"
-
-
-  # ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  #
-  #  Link your library with frameworks, or libraries. Libraries do not include
-  #  the lib prefix of their name.
-  #
-
-  # spec.framework  = "SomeFramework"
-  # spec.frameworks = "SomeFramework", "AnotherFramework"
-
-  # spec.library   = "iconv"
-  # spec.libraries = "iconv", "xml2"
-
-
-  # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  #
-  #  If your library depends on compiler flags you can set them in the xcconfig hash
-  #  where they will only apply to your library. If you depend on other Podspecs
-  #  you can include multiple dependencies to ensure it works.
-
-  # spec.requires_arc = true
-
-  # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-  # spec.dependency "JSONKit", "~> 1.4"
 
 end
