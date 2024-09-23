@@ -25,6 +25,7 @@ jobs:
           ./.ci/install.sh
           ./autogen.sh
           python generate-darwin-source-and-headers.py --only-ios
+          cd Example/
           bundle install
           bundle exec pod install
       - name: Build
