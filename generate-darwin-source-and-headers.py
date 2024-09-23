@@ -147,7 +147,7 @@ def build_target(platform, platform_headers):
     working_dir = os.getcwd()
     try:
         os.chdir(build_dir)
-        subprocess.check_call(['../configure', '-host', platform.triple], env=env)
+        subprocess.check_call(['../configure', '-host', platform.triple, "--disable-multi-os-directory"], env=env)
     finally:
         os.chdir(working_dir)
 
