@@ -2,7 +2,7 @@ name: iOS starter workflow
 
 on:
   push:
-    branches: [ "bugfix/v3.4.6_iOS" ]
+    branches: [ "master" ]
   pull_request:
     branches: [ "master" ]
 
