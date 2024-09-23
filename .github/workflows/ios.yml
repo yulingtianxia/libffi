@@ -22,6 +22,7 @@ jobs:
           echo Using default scheme: $default
       - name: Prepare
         run: |
+          ./.ci/install.sh
           ./autogen.sh
           python generate-darwin-source-and-headers.py --only-ios
           bundle install
